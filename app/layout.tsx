@@ -1,6 +1,5 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
-import Header from './components/Header';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -8,8 +7,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'EntrümpelMeister München | Professionelle Entrümpelung',
-  description: 'Professionelle Haushaltsauflösung, Entrümpelung ve Wohnungsauflösung in München und Umgebung. Schnell, zuverlässig und besenrein.',
+  title: 'Entrümpelung München | Entrümpelmeister Wohnungsauflösung & Hausauflösung',
+  description: 'Entrümpelmeister München bietet professionelle Entrümpelung, Wohnungsauflösung und Hausauflösung in München. Jetzt WhatsApp an +491639603781 für kostenfreie Besichtigung und Festpreisangebot.',
 };
 
 export default function RootLayout({
@@ -20,8 +19,6 @@ export default function RootLayout({
   return (
     <html lang="de" className="scroll-smooth">
       <body className={`${inter.variable} font-sans bg-zinc-950 text-zinc-50 antialiased min-h-screen flex flex-col`}>
-        <Header />
-
         <main className="flex-grow">
           {children}
         </main>
