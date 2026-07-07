@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import Header from './components/Header';
 
@@ -50,17 +51,17 @@ export default function HomePage() {
                   <div className="md:flex-1">
                     <h3 className="text-2xl font-bold text-emerald-400 mb-4">Entrümpelung München</h3>
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-                      <img src="/images/Screenshot_20260630-195232.png" alt="Entrümpelung Bestand 1" className="w-full h-48 object-cover object-center rounded-md" />
-                      <img src="/images/Screenshot_20260630-195322.png" alt="Entrümpelung Bestand 2" className="w-full h-48 object-cover object-center rounded-md" />
-                      <img src="/images/Screenshot_20260630-195416.png" alt="Entrümpelung Bestand 3" className="w-full h-48 object-cover object-center rounded-md" />
-                      <img src="/images/Screenshot_20260630-195437.png" alt="Entrümpelung Bestand 4" className="w-full h-48 object-cover object-center rounded-md" />
-                      <img src="/images/Screenshot_20260630-195452.png" alt="Entrümpelung Bestand 5" className="w-full h-48 object-cover object-center rounded-md" />
-                      <img src="/images/Screenshot_20260704-181501.png" alt="Entrümpelung Neu 1" className="w-full h-48 object-cover object-center rounded-md" />
-                      <img src="/images/Screenshot_20260704-181558.png" alt="Entrümpelung Neu 2" className="w-full h-48 object-cover object-center rounded-md" />
-                      <img src="/images/Screenshot_20260704-181654.png" alt="Entrümpelung Neu 3" className="w-full h-48 object-cover object-center rounded-md" />
-                      <img src="/images/Screenshot_20260704-181715.png" alt="Entrümpelung Neu 4" className="w-full h-48 object-cover object-center rounded-md" />
-                      <img src="/images/Screenshot_20260704-181733.png" alt="Entrümpelung Neu 5" className="w-full h-48 object-cover object-center rounded-md" />
-                      <img src="/images/Screenshot_20260704-181746.png" alt="Entrümpelung Neu 6" className="w-full h-48 object-cover object-center rounded-md" />
+                      <Image src="/images/Screenshot_20260630-195232.png" alt="Entrümpelung Bestand 1" width={640} height={384} className="w-full h-48 object-cover object-center rounded-md" />
+                      <Image src="/images/Screenshot_20260630-195322.png" alt="Entrümpelung Bestand 2" width={640} height={384} className="w-full h-48 object-cover object-center rounded-md" />
+                      <Image src="/images/Screenshot_20260630-195416.png" alt="Entrümpelung Bestand 3" width={640} height={384} className="w-full h-48 object-cover object-center rounded-md" />
+                      <Image src="/images/Screenshot_20260630-195437.png" alt="Entrümpelung Bestand 4" width={640} height={384} className="w-full h-48 object-cover object-center rounded-md" />
+                      <Image src="/images/Screenshot_20260630-195452.png" alt="Entrümpelung Bestand 5" width={640} height={384} className="w-full h-48 object-cover object-center rounded-md" />
+                      <Image src="/images/Screenshot_20260704-181501.png" alt="Entrümpelung Neu 1" width={640} height={384} className="w-full h-48 object-cover object-center rounded-md" />
+                      <Image src="/images/Screenshot_20260704-181558.png" alt="Entrümpelung Neu 2" width={640} height={384} className="w-full h-48 object-cover object-center rounded-md" />
+                      <Image src="/images/Screenshot_20260704-181654.png" alt="Entrümpelung Neu 3" width={640} height={384} className="w-full h-48 object-cover object-center rounded-md" />
+                      <Image src="/images/Screenshot_20260704-181715.png" alt="Entrümpelung Neu 4" width={640} height={384} className="w-full h-48 object-cover object-center rounded-md" />
+                      <Image src="/images/Screenshot_20260704-181733.png" alt="Entrümpelung Neu 5" width={640} height={384} className="w-full h-48 object-cover object-center rounded-md" />
+                      <Image src="/images/Screenshot_20260704-181746.png" alt="Entrümpelung Neu 6" width={640} height={384} className="w-full h-48 object-cover object-center rounded-md" />
                     </div>
                   </div>
 
@@ -86,7 +87,7 @@ export default function HomePage() {
 
             <div className="rounded-3xl border border-slate-800 bg-slate-900/80 overflow-hidden shadow-lg shadow-black/20">
               <div className="h-48 overflow-hidden bg-slate-900">
-                <img src="/images/Screenshot_20260630-195232.png" alt="Entsorgung" className="w-full h-full object-cover object-center" />
+                <Image src="/images/Screenshot_20260630-195232.png" alt="Entsorgung" width={640} height={384} className="w-full h-full object-cover object-center" />
               </div>
               <div className="p-8">
                 <h3 className="text-xl font-semibold text-white mb-3">Entsorgung</h3>
@@ -97,7 +98,7 @@ export default function HomePage() {
 
             <div className="rounded-3xl border border-slate-800 bg-slate-900/80 overflow-hidden shadow-lg shadow-black/20">
               <div className="h-48 overflow-hidden bg-slate-900">
-                <img src="/images/Screenshot_20260630-195213.png" alt="Hausauflösung" className="w-full h-full object-cover object-center" />
+                <Image src="/images/Screenshot_20260630-195213.png" alt="Hausauflösung" width={640} height={384} className="w-full h-full object-cover object-center" />
               </div>
               <div className="p-8">
                 <h3 className="text-xl font-semibold text-white mb-3">Hausauflösung</h3>
@@ -108,7 +109,7 @@ export default function HomePage() {
 
             <div className="rounded-3xl border border-slate-800 bg-slate-900/80 overflow-hidden shadow-lg shadow-black/20">
               <div className="h-48 overflow-hidden bg-slate-900">
-                <img src="/images/Screenshot_20260630-195416.png" alt="Hausreinigung" className="w-full h-full object-cover object-center" />
+                <Image src="/images/Screenshot_20260630-195416.png" alt="Hausreinigung" width={640} height={384} className="w-full h-full object-cover object-center" />
               </div>
               <div className="p-8">
                 <h3 className="text-xl font-semibold text-white mb-3">Hausreinigung</h3>
@@ -119,18 +120,18 @@ export default function HomePage() {
 
             <div className="rounded-3xl border border-slate-800 bg-slate-900/80 overflow-hidden shadow-lg shadow-black/20">
               <a href="/gartenarbeit" className="block h-48 overflow-hidden bg-slate-900">
-                <img src="/images/Screenshot_20260704-185646.png" alt="Gartenarbeit" className="w-full h-full object-cover object-center" />
+                <Image src="/images/Screenshot_20260704-185646.png" alt="Gartenarbeit" width={640} height={384} className="w-full h-full object-cover object-center" />
               </a>
               <div className="p-8">
                 <h3 className="text-xl font-semibold text-white mb-3">Gartenarbeit</h3>
-                <p className="text-slate-300 mb-6">Pflege, Reinigung ve Gestaltung Ihres Gartens durch unser erfahrenes Team.</p>
+                <p className="text-slate-300 mb-6">Pflege, Reinigung und Gestaltung Ihres Gartens durch unser erfahrenes Team.</p>
                 <a href="/gartenarbeit" className="rounded-full bg-emerald-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-emerald-400">Mehr erfahren</a>
               </div>
             </div>
 
             <div className="rounded-3xl border border-slate-800 bg-slate-900/80 overflow-hidden shadow-lg shadow-black/20">
               <div className="h-48 overflow-hidden bg-slate-900">
-                <img src="/images/PXL_20260601_101049822_1.jpg" alt="Renovierung" className="w-full h-full object-cover object-center" />
+                <Image src="/images/PXL_20260601_101049822_1.jpg" alt="Renovierung" width={640} height={384} className="w-full h-full object-cover object-center" />
               </div>
               <div className="p-8">
                 <h3 className="text-xl font-semibold text-white mb-3">Renovierung</h3>
