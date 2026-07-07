@@ -2,62 +2,55 @@ import React from 'react'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Entrümpelung & Hausauflösung in München und Umgebung',
+  title: 'Entrümpelung & Hausauflösung in München und Umgebung | Unsere Einsatzgebiete',
   description:
-    'Münih ve çevresindeki hizmet bölgelerimiz: Entrümpelung & Hausauflösung hizmetlerimiz için kapsamlı bölge listesi ve hızlı iletişim.',
+    'Wir sind in 81375 München ansässig und bieten professionelle Entrümpelung und Hausauflösung im Umkreis von 75 km an. Hier finden Sie eine Übersicht unserer Einsatzgebiete.',
 }
 
 const areas: { [group: string]: string[] } = {
-  'A-E': [
-    'Aidenbach',
-    'Altomünster',
+  'A–E': [
     'Aying',
-    'Baar-Ebenhausen',
+    'Aubing',
     'Bad Aibling',
-    'Bad Tölz',
     'Baierbrunn',
-    'Bernried',
-    'Berg-am-Laim',
+    'Berg am Laim',
     'Brunnthal',
     'Dachau',
     'Dorfen',
+    'Dorfen-Ost',
     'Ebersberg',
-    'Ebershausen',
+    'Eching',
     'Erding',
   ],
-  'F-K': [
+  'F–K': [
+    'Feldkirchen',
     'Freising',
     'Fürstenfeldbruck',
     'Gauting',
     'Germering',
-    'Gilching',
     'Gräfelfing',
-    'Gmund am Tegernsee',
+    'Gauting',
     'Haar',
-    'Hachinger Tal',
     'Holzkirchen',
     'Ismaning',
     'Kirchheim bei München',
     'Krailling',
-    'Königsdorf',
   ],
-  'L-Q': [
+  'L–Q': [
+    'Laim',
     'Landshut',
     'Landsberg am Lech',
     'Miesbach',
-    'München (All districts)',
+    'München (Stadtteile)',
+    'Moosach',
     'Neubiberg',
     'Neufahrn bei Freising',
     'Oberschleißheim',
     'Oberhaching',
     'Pasing',
-    'Peissenberg',
     'Planegg',
-    'Puchheim',
-    'Pullach',
-    'Poing',
   ],
-  'R-Z': [
+  'R–Z': [
     'Rosenheim',
     'Schäftlarn',
     'Schongau',
@@ -68,28 +61,31 @@ const areas: { [group: string]: string[] } = {
     'Unterschleißheim',
     'Unterhaching',
     'Vaterstetten',
-    'Weilheim in Oberbayern',
     'Wessling',
     'Wolfratshausen',
   ],
 }
 
-export default function HizmetBolgelerimizPage() {
+export default function EinsatzgebietePage() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 py-12">
       <main className="mx-auto max-w-5xl px-6">
         <header className="mb-8 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold">Münih ve Çevresindeki Hizmet Bölgelerimiz</h1>
-          <p className="mt-2 text-slate-300">Entrümpelung & Hausauflösung hizmetlerimiz aşağıdaki şehir ve ilçelerde sunulmaktadır. İhtiyacınız olan bölgeyi açarak detaylara ulaşabilirsiniz.</p>
+          <h1 className="text-3xl md:text-4xl font-bold">Unsere Einsatzgebiete im Raum München</h1>
+          <p className="mt-2 text-slate-300 max-w-3xl mx-auto">
+            Unser Unternehmen ist in 81375 München ansässig. Wir bieten professionelle Entrümpelung und Hausauflösung
+            in einem Umkreis von bis zu 75 km an — schnell, zuverlässig und diskret. Nachfolgend finden Sie eine
+            alphabetisch geordnete Übersicht unserer Einsatzorte. Für spezielle Anfragen kontaktieren Sie uns bitte direkt.
+          </p>
         </header>
 
-        <section aria-label="Hizmet Bölgeleri">
+        <section aria-label="Einsatzgebiete">
           {Object.entries(areas).map(([group, list]) => (
             <details key={group} className="mb-4 rounded-lg bg-slate-900/60 border border-slate-800 p-4">
               <summary className="cursor-pointer font-semibold text-emerald-400">{group}</summary>
               <ul className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-200">
-                {list.map((item) => (
-                  <li key={item} className="py-1">Entrümpelung & Hausauflösung {item}</li>
+                {list.map((place) => (
+                  <li key={place} className="py-1">Entrümpelung & Hausauflösung in {place}</li>
                 ))}
               </ul>
             </details>
@@ -97,9 +93,9 @@ export default function HizmetBolgelerimizPage() {
         </section>
 
         <section className="mt-8 text-center">
-          <p className="text-slate-300">Listeyi genişletmek veya özel bir ilçe eklemek isterseniz bizimle iletişime geçin.</p>
+          <p className="text-slate-300">Sie benötigen eine individuelle Offerte oder ein kurzfristiges Angebot? Kontaktieren Sie uns.</p>
           <div className="mt-4">
-            <Link href="/kontakt" className="inline-block rounded-full bg-emerald-500 px-5 py-2 text-slate-950 font-semibold">İletişime Geçin</Link>
+            <Link href="/kontakt" className="inline-block rounded-full bg-emerald-500 px-5 py-2 text-slate-950 font-semibold">Kontaktieren Sie uns</Link>
           </div>
         </section>
       </main>

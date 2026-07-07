@@ -243,7 +243,7 @@ export default function HomePage() {
               <Link href="/impressum" className="text-emerald-400 hover:text-emerald-300">Impressum</Link>
               <Link href="/agb" className="text-slate-200 hover:text-emerald-300">AGB</Link>
               <Link href="/faq" className="text-slate-200 hover:text-emerald-300">FAQ</Link>
-              <Link href="/hizmet-bolgelerimiz" className="text-slate-200 hover:text-emerald-300">Hizmet Bölgelerimiz</Link>
+              <Link href="/hizmet-bolgelerimiz" className="text-slate-200 hover:text-emerald-300">Unsere Einsatzgebiete</Link>
             </div>
           </div>
         </footer>
