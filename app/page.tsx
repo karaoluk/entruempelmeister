@@ -1,28 +1,35 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from './components/Header';
 
 export default function HomePage() {
+  const [cookieBannerVisible, setCookieBannerVisible] = useState(true);
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <div id="top" />
       <Header />
 
       <main className="mx-auto max-w-6xl px-6 py-12 space-y-20">
-        <section id="hero" className="relative rounded-2xl overflow-hidden bg-[url('/1000147087.jpg')] bg-cover bg-center">
+        <section id="hero" className="relative rounded-2xl overflow-hidden bg-[url('/images/Screenshot_20260704-181501.png')] bg-cover bg-center">
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
           <div className="relative z-10 max-w-6xl mx-auto px-6 py-16">
             <div className="max-w-4xl text-center mx-auto">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-white">Entrümpelung München vom Entrümpelmeister</h1>
               <p className="mt-4 text-lg md:text-xl text-slate-200">Professionelle Entrümpelung München, Wohnungsauflösung und Hausauflösung in München &amp; Umgebung — schnell, zuverlässig und besenrein.</p>
 
-              <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://wa.me/491639603781" target="_blank" rel="noopener noreferrer" className="rounded-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 px-6 py-3 font-semibold shadow-lg transition">WhatsApp +49 163 9603781</a>
-                <a href="#kontakt" className="rounded-full border border-white/10 bg-white/5 text-white px-6 py-3 font-semibold shadow-lg transition hover:bg-white/10">Kostenlose Besichtigung anfragen</a>
-              </div>
+<div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+  <a href="https://wa.me/491639603781" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-green-600 hover:bg-green-700">
+    WhatsApp +49 163 9603781
+  </a>
+</div>
 
-              <p className="mt-6 text-slate-200 text-center">Entrümpelung München, Wohnungsauflösung München und Hausauflösung München mit transparenten Festpreisen und persönlicher Betreuung.</p>
+
+
+              
 
               <ul className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-6 text-slate-200">
                 <li className="flex items-center gap-3">
@@ -256,6 +263,47 @@ export default function HomePage() {
         </svg>
         <span className="hidden sm:inline text-white">Mit WhatsApp kontaktieren</span>
       </a>
+
+      {cookieBannerVisible && (
+        <div
+          style={{
+            position: 'fixed',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            zIndex: 999999,
+            backgroundColor: '#111827',
+            color: '#ffffff',
+            padding: '16px 24px',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            gap: '16px',
+            flexWrap: 'wrap',
+            boxShadow: '0 -4px 6px -1px rgba(0, 0, 0, 0.1)',
+          }}
+        >
+          <div style={{ fontSize: '14px', maxWidth: '700px' }}>
+            Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten. Durch die Nutzung unserer Website erklären Sie sich damit einverstanden.
+          </div>
+          <div style={{ display: 'flex', gap: '10px' }}>
+            <button
+              onClick={() => setCookieBannerVisible(false)}
+              style={{
+                backgroundColor: '#10B981',
+                color: '#ffffff',
+                border: 'none',
+                padding: '8px 16px',
+                borderRadius: '6px',
+                cursor: 'pointer',
+                fontWeight: 'bold',
+              }}
+            >
+              Alle akzeptieren
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

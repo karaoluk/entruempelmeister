@@ -7,8 +7,27 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: 'Entrümpelung München | Entrümpelmeister Wohnungsauflösung & Hausauflösung',
-  description: 'Entrümpelmeister München bietet professionelle Entrümpelung, Wohnungsauflösung und Hausauflösung in München. Jetzt WhatsApp an +491639603781 für kostenfreie Besichtigung und Festpreisangebot.',
+  title: 'Entrümpelung München | Entsorgung & Hausauflösung – Entrümpelmeister',
+  description: 'Professionelle Entrümpelung, Entsorgung & Hausauflösung in München. Schnell, zuverlässig, zum Festpreis. Jetzt kostenlose Besichtigung per WhatsApp sichern!',
+  keywords: [
+    'Entrümpelung München',
+    'Entsorgung München',
+    'Hausauflösung München',
+    'Wohnungsauflösung München',
+    'Entrümpelungsfirma München',
+    'Haushaltsauflösung München',
+  ],
+  openGraph: {
+    title: 'Entrümpelung München | Entsorgung & Hausauflösung – Entrümpelmeister',
+    description: 'Professionelle Entrümpelung, Entsorgung & Hausauflösung in München. Schnell, zuverlässig, zum Festpreis. Jetzt kostenlose Besichtigung per WhatsApp sichern!',
+    locale: 'de_DE',
+    type: 'website',
+    siteName: 'Entrümpelmeister',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
